@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get My Fix!</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+</head>
+
+<body>
+  <main class="container container-fluid mt-5">
+    {{> header }}
+    {{{ body }}}
+    {{> footer }}
+  </main>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{#else}}
+  <script src="/js/landing.js"></script>
+  {{/else}}
+  {{/if}}
+</body>
+
+</html>
